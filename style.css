@@ -1,0 +1,595 @@
+@font-face {
+  font-family: bitterRegular;
+  src: url(Bitter-Regular.ttf);
+}
+
+@font-face {
+  font-family: langdonRegular;
+  src: url(Langdon.otf);
+}
+
+@font-face {
+  font-family: bitterItalic;
+  src: url(Bitter-Italic.ttf);
+}
+
+@font-face {
+  font-family: bitterBold;
+  src: url(Bitter-Bold.ttf);
+}
+
+body {
+  height:100%
+  padding: 0px;
+  margin:0px;
+  font-family: bitterRegular;
+  font-size:2vmin;
+  background-image: url(wall_texture.jpg);
+  background-size: cover;
+}
+
+html {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.mainContainerGrid {
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+
+grid-template-areas:
+  "nav nav nav nav nav nav nav nav"
+  "hero hero hero hero hero hero hero hero"
+  "main main main main main main main main"
+  "header header header header header header header header"
+  "box box box box box box box box"
+  "footer footer footer footer footer footer footer footer"
+}
+
+.menuWrapper {
+  grid-area: nav;
+  color: black;
+  padding: 1.2vw;
+  position: fixed;
+  background-image: url(wall_texture.jpg);
+  box-shadow: 3px 3px 10px black;
+  z-index: +99;
+  width: 100%;
+}
+.menuBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 0.3vw;
+  margin-right: 2.2vw;
+  background-image: url(wall_texture.jpg);
+  background-size: cover;
+}
+
+.navLink{
+  display: flex;
+  flex-direction: row;
+  padding: 0.8vw;
+  font-size: 2.8vmin;
+}
+
+.navLink a {
+  color: black;
+}
+
+.navLink a:hover {
+  color: #ffd600;
+}
+
+.navLink a:link {
+  text-decoration: none;
+}
+
+.logoSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  grid-area: hero;
+  grid-column: 1/5;
+  background-color: #FFD600;
+  padding-top: 3vw;
+  margin-top: 6vw;
+}
+
+.orderButton{
+  text-align: center;
+  border-style: solid;
+  border-width: 0.3vw;
+  border-radius: 3vw;
+  padding:1vw;
+  font-family: bitterRegular;
+  font-size: 2vw;
+  margin-top: 3vw;
+  width: 15vw;
+  background-color: #FFD600;
+}
+
+.orderButton a {
+  color: black;
+}
+
+.orderButton:hover {
+  background-color: #e6bf00;
+  cursor: pointer;
+}
+
+.orderButton a:link {
+  text-decoration: none;
+}
+
+.foodImage1{
+  grid-area: hero;
+  grid-column: 5/9;
+  background-image: url(R03.JPG);
+  background-size: cover;
+  height: 35vw;
+  background-position: center;
+  margin-top: 6vw;
+}
+
+.aboutWrapper{
+  display: flex;
+  grid-area: main;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.aboutSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin-top: 1vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  padding-left: 18vw;
+  padding-right: 18vw;
+  text-align: center;
+  border-style: solid;
+  border-width: 0.3vw;
+  border-color: #ffd600;
+}
+
+.aboutSection h1{
+  font-family: langdonRegular;
+  font-size: 6vw;
+  margin-bottom: 0;
+}
+
+.aboutSection h2{
+  font-family: bitterItalic;
+  font-size: 2.5vw;
+  margin-top: 0;
+}
+
+.aboutSection p{
+  font-size: 1.3vw;
+  line-height: 2vw;
+}
+
+mark{
+  background-color: #ffd600;
+}
+
+.aboutSection p:nth-child(3){
+  font-size: 1.6vw;
+  line-height: 2vw;
+}
+
+.aboutSection a{
+  color: #FFD600;
+  font-family: bitterBold;
+}
+
+.aboutSection a:hover{
+  color: #e6bf00;
+  cursor: pointer;
+}
+
+.homepageOutlet{
+  grid-area:header;
+  height: 40vw;
+  background-image: url(outlet_1.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-top: 1vw;
+}
+
+.pronounceBox {
+  grid-column-end: span 6;
+  display: grid;
+  grid-area:box;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 1.2vw;
+  font-family: bitterRegular;
+  font-size: 1.5vw;
+}
+
+.pronounceText{
+  grid-column: 4/span 4;
+  margin-right: 10vw;
+  padding-bottom: 1vw;
+}
+
+.pronounceText h1{
+  font-family: langdonRegular;
+  font-size: 3.8vw;
+  margin-bottom: 0;
+}
+
+.pronounceText h2{
+  font-family: bitterItalic;
+  font-size: 2.8vw;
+  margin-top: 0;
+}
+
+.logoThumb{
+  grid-column: 1 / span 3;
+  margin-left: 8vw;
+  margin-top: 5vw;
+}
+
+
+.locationsButton{
+  text-align: center;
+  border-style: solid;
+  border-width: 0.3vw;
+  border-radius: 5vw;
+  padding:1vw;
+  font-family: bitterItalic;
+  font-size: 4vw;
+  margin-top: 15vw;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  background-color: #FFD600;
+}
+
+.locationsButton a {
+  color: black;
+}
+
+.locationsButton:hover {
+  background-color: #e6bf00;
+  cursor: pointer;
+}
+
+.footerBox{
+  grid-area:footer;
+  background-color: #ffd600;
+
+}
+
+.footerImage{
+  grid-area: footer;
+  grid-column: 3/7;
+  margin-top: 1vw;
+}
+
+.footerText{
+  text-align: center;
+  font-size: 0.6vw;
+  margin-top: 1vw;
+}
+
+.footerWhatsapp{
+  grid-area:footer;
+  grid-column: 8;
+  text-align: center;
+  padding-top: 2vw;
+}
+.footerWhatsappText{
+  grid-area:footer;
+  grid-column: 7/9;
+  padding-top: 2.3vw;
+  font-size: 1vw;
+  padding-left: 3vw;
+  font-family: bitterItalic
+}
+
+.footerInsta{
+  grid-area:footer;
+  grid-column: 1;
+  margin-top: 2vw;
+  margin-left: 3vw;
+}
+
+.footerFacebook{
+  grid-area:footer;
+  grid-column: 2;
+  margin-top: 2vw;
+}
+
+@media screen and (max-width:600px){
+
+  .mainContainerGrid {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+
+  grid-template-areas:
+    "nav nav nav nav nav nav nav nav"
+    "hero hero hero hero hero hero hero hero"
+    "food food food food food food food food"
+    "main main main main main main main main"
+    "header header header header header header header header"
+    "box box box box box box box box"
+    "footer footer footer footer footer footer footer footer"
+  }
+
+  .menuWrapper {
+    grid-area: hero;
+    color: black;
+    padding: 1.2vw;
+    position: relative;
+    /* background-image: url(wall_texture.jpg);
+    background-color: #FFD600; */
+    box-shadow: 3px 3px 10px black;
+    z-index: +99;
+    width: 100%;
+    background-color: #ffd600;
+  }
+  .menuBox{
+    display: flex;
+    flex-direction: row;
+    /* height: 3vw; */
+    align-items: center;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 0.3vw;
+    margin-right: 2.2vw;
+    /* border-color: #ffd600;
+    /* background-image: url(wall_texture.jpg);
+    background-size: cover; */
+    background-color: #ffd600;
+  }
+
+  .navLink{
+    display: flex;
+    flex-direction: row;
+    padding: 0.8vw;
+    font-size: 3.5vmin;
+  }
+
+  .navLink a {
+    color: black;
+  }
+
+  .navLink a:hover {
+    color: #ffd600;
+  }
+
+  .navLink a:link {
+    text-decoration: none;
+  }
+
+  .logoSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    grid-area: nav;
+    /* grid-column: 1/5; */
+    background-color: #FFD600;
+    padding-top: 3vw;
+    margin-top: 0vw;
+    padding-bottom: 2vw;
+  }
+
+  .orderButton{
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5vw;
+    border-radius: 4vw;
+    padding:1vw;
+    font-family: bitterRegular;
+    font-size: 4.5vw;
+    margin-top: 4vw;
+    width: 25vw;
+    background-color: #FFD600;
+  }
+
+  .orderButton a {
+    color: black;
+  }
+
+  .orderButton:hover {
+    background-color: #e6bf00;
+    cursor: pointer;
+  }
+
+  .orderButton a:link {
+    text-decoration: none;
+  }
+
+  .foodImage1{
+    grid-area: food;
+    background-image: url(R03.JPG);
+    background-size: cover;
+    height: 35vw;
+    background-position: center;
+    margin-top: 0vw;
+  }
+
+  .aboutWrapper{
+    display: flex;
+    grid-area: main;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .aboutSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.3vw;
+    border-color: #ffd600;
+  }
+
+  .aboutSection h1{
+    font-family: langdonRegular;
+    font-size: 10vw;
+    margin-bottom: 0;
+  }
+
+  .aboutSection h2{
+    font-family: bitterItalic;
+    font-size: 6vw;
+    margin-top: 0;
+  }
+
+  .aboutSection p{
+    font-size: 3vw;
+    line-height: 4vw;
+  }
+
+  mark{
+    background-color: #ffd600;
+  }
+
+  .aboutSection p:nth-child(3){
+    font-size: 3vw;
+    line-height: 4vw;
+  }
+
+  .aboutSection a{
+    color: #FFD600;
+    font-family: bitterBold;
+  }
+
+  .aboutSection a:hover{
+    color: #e6bf00;
+    cursor: pointer;
+  }
+
+  .homepageOutlet{
+    grid-area:header;
+    height: 40vw;
+    background-image: url(outlet_1.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 1vw;
+  }
+
+  .pronounceBox {
+    grid-column-end: span 6;
+    display: grid;
+    grid-area:box;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 1.2vw;
+    font-family: bitterRegular;
+    font-size: 2vw;
+  }
+
+  .pronounceText{
+    grid-column: 4/span 4;
+    margin-right: 10vw;
+    padding-bottom: 1vw;
+  }
+
+  .pronounceText h1{
+    font-family: langdonRegular;
+    font-size: 4vw;
+    margin-bottom: 0;
+  }
+
+  .pronounceText h2{
+    font-family: bitterItalic;
+    font-size: 3vw;
+    margin-top: 0;
+  }
+
+  .logoThumb{
+    grid-column: 1 / span 3;
+    margin-left: 8vw;
+    margin-top: 9vw;
+  }
+
+
+  .locationsButton{
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5vw;
+    border-radius: 6vw;
+    padding:2vw;
+    font-family: bitterItalic;
+    font-size: 6vw;
+    margin-top: 15vw;
+    margin-left: 35vw;
+    margin-right: 35vw;
+    background-color: #FFD600;
+  }
+
+  .locationsButton a {
+    color: black;
+  }
+
+  .locationsButton:hover {
+    background-color: #e6bf00;
+    cursor: pointer;
+  }
+
+  .footerBox{
+    grid-area:footer;
+    background-color: #ffd600;
+
+  }
+
+  .footerImage{
+    grid-area: footer;
+    grid-column: 3/7;
+    margin-top: 1vw;
+  }
+
+  .footerText{
+    text-align: center;
+    font-size: 0.6vw;
+    margin-top: 1vw;
+  }
+
+  .footerWhatsapp{
+    grid-area:footer;
+    grid-column: 8;
+    text-align: center;
+    padding-top: 2vw;
+  }
+  .footerWhatsappText{
+    grid-area:footer;
+    grid-column: 8;
+    padding-top: 0vw;
+    font-size: 1vw;
+    padding-left: 0vw;
+    font-family: bitterItalic
+  }
+
+  .footerInsta{
+    grid-area:footer;
+    grid-column: 1;
+    margin-top: 2vw;
+    margin-left: 3vw;
+  }
+
+  .footerFacebook{
+    grid-area:footer;
+    grid-column: 2;
+    margin-top: 2vw;
+  }
+
+}
